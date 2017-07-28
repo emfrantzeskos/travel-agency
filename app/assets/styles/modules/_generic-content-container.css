@@ -2,8 +2,9 @@
 
   p {
     line-height: 1.65;
-    margin-top: 1.8rem;
+    margin-top: 0;
     margin-bottom: 1.8rem;
+    font-weight: 300;
     @mixin smallAndAbove {
       font-size: 1.125rem;
     }
