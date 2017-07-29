@@ -35,12 +35,53 @@
     padding-right: 65px;
   }
 
+  &--gutters-smaller {
+    margin-right: -15px;
+  }
+
+  &--gutters-smaller > div[class^="row__"] {
+    padding-right: 15px;
+  }
+
+  &--gutters-small {
+    margin-right: -45px;
+  }
+
+  &--gutters-small > div[class^="row__"] {
+    padding-right: 45px;
+  }
+
   &--gutters-large {
     margin-right: -100px;
   }
 
   &--gutters-large > div[class^="row__"] {
     padding-right: 100px;
+  }
+
+  &--top-padding {
+    padding-top: 100px;
+  }
+
+  @mixin largeAndAbove {
+    &--change-gutters-to-small-at-large {
+      margin-right: -45px;
+    }
+
+    &--change-gutters-to-small-at-large > div[class^="row__"] {
+      padding-right: 45px;
+    }
+  }
+
+  &--equal-height-at-medium {
+    @mixin mediumAndAbove {
+      display: flex;
+
+      & > div[class^="row__"] {
+        float: none;
+        display: flex;
+      }
+    }
   }
 
 }

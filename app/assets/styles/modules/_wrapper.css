@@ -21,4 +21,24 @@
         margin-bottom: 3.875rem;
     }
   }
+
+  &--no-lr-padding-until-medium {
+    padding-left: 0;
+    padding-right: 0;
+
+    @mixin mediumAndAbove {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &--no-lr-padding-until-large {
+    padding-left: 0;
+    padding-right: 0;
+
+    @mixin mediumAndAbove {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
 }
