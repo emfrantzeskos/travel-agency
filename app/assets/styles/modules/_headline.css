@@ -32,16 +32,26 @@
     font-weight: 200;
   }
 
-  &--bot-margin-small {
+  &--bot-margin-smaller {
     margin-bottom: .5em;
   }
 
+  &--bot-margin-small {
+    margin-bottom: .8em;
+  }
+
   &--bot-margin-medium {
-    margin-bottom: 1.16em;
+    margin-bottom: 1em;
   }
 
   &--bot-margin-large {
     margin-bottom: 1.6em;
+  }
+
+  @mixin mediumAndAbove {
+    &--change-bot-margin-to-medium-at-medium {
+      margin-bottom: 1em;
+    }
   }
 
   &--neg-top-margin {

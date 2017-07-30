@@ -3,13 +3,13 @@
   padding-bottom: 1.2rem;
 
   @mixin mediumAndAbove {
-    padding-top: 4.5rem;
-    padding-bottom: 4.5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
   }
 
   &--testimonials {
     background-color: #E0E6EF;
-    @mixin mediumAndAbove {
+    @mixin largeAndAbove {
       background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
       background-size: cover;
     }
@@ -19,7 +19,7 @@
     padding-bottom: 0;
 
     @mixin mediumAndAbove {
-      padding-bottom: 4.5rem;
+      padding-bottom: 3.5rem;
     }
   }
 
@@ -27,7 +27,7 @@
     padding-bottom: 0;
 
     @mixin mediumAndAbove {
-      padding-bottom: 4.5rem;
+      padding-bottom: 3.5rem;
     }
   }
 

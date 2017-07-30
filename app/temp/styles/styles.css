@@ -615,8 +615,8 @@ a {
 @media (min-width: 800px) {
 
 .page-section {
-    padding-top: 4.5rem;
-    padding-bottom: 4.5rem
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem
 }
   }
 
@@ -624,7 +624,7 @@ a {
     background-color: #E0E6EF;
   }
 
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
 
 .page-section--testimonials {
       background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
@@ -639,7 +639,7 @@ a {
 @media (min-width: 800px) {
 
 .page-section--no-bot-padding-until-medium {
-      padding-bottom: 4.5rem
+      padding-bottom: 3.5rem
   }
   }
 
@@ -650,7 +650,7 @@ a {
 @media (min-width: 800px) {
 
 .page-section--no-bot-padding-until-large {
-      padding-bottom: 4.5rem
+      padding-bottom: 3.5rem
   }
   }
 
@@ -701,16 +701,26 @@ a {
     font-weight: 200;
   }
 
-.headline--bot-margin-small {
+.headline--bot-margin-smaller {
     margin-bottom: .5em;
   }
 
+.headline--bot-margin-small {
+    margin-bottom: .8em;
+  }
+
 .headline--bot-margin-medium {
-    margin-bottom: 1.16em;
+    margin-bottom: 1em;
   }
 
 .headline--bot-margin-large {
     margin-bottom: 1.6em;
+  }
+
+@media (min-width: 800px) {
+    .headline--change-bot-margin-to-medium-at-medium {
+      margin-bottom: 1em;
+    }
   }
 
 @media (min-width: 800px) {
@@ -968,4 +978,27 @@ a {
 
 .testimonial--no-bot-margin {
     margin-bottom: 0;
+  }
+
+.site-footer {
+  background-color: #2F5572;
+  padding-top: .5rem;
+  padding-bottom: .4rem;
+  text-align: center;
+  color: #FFF;
+}
+
+.site-footer__text {
+    display: block;
+    font-weight: 200;
+    margin-bottom: 1rem;
+  }
+
+@media (min-width: 800px) {
+
+.site-footer__text {
+      display: inline;
+      margin-bottom: 0;
+      margin-right: 2rem
+  }
   }
