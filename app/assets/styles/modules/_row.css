@@ -63,6 +63,16 @@
     padding-top: 100px;
   }
 
+  @mixin mediumToLarge {
+    &--change-gutters-to-small-at-medium {
+      margin-right: -45px;
+    }
+
+    &--change-gutters-to-small-at-medium > div[class^="row__"] {
+      padding-right: 45px;
+    }
+  }
+
   @mixin largeAndAbove {
     &--change-gutters-to-small-at-large {
       margin-right: -45px;

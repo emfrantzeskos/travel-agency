@@ -8,6 +8,10 @@
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
+    padding-top: 90px;
+    @mixin mediumAndAbove {
+      padding-top: 62px;
+    }
   }
 
   &__title {
@@ -17,6 +21,14 @@
     color: $mainBlue;
 
     @mixin smallAndAbove {
+      font-size: 3.8rem;
+    }
+
+    @mixin mediumAndAbove {
+      font-size: 4.2rem;
+    }
+
+    @mixin largeAndAbove {
       font-size: 4.8rem;
     }
   }
@@ -28,13 +40,21 @@
     margin: 0;
 
     @mixin smallAndAbove {
+      font-size: 3.8rem;
+    }
+
+    @mixin mediumAndAbove {
+      font-size: 4.2rem;
+    }
+
+    @mixin largeAndAbove {
       font-size: 4.8rem;
     }
   }
 
   &__description {
     color: #FFF;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 100;
     max-width: 480px;
     margin-left: auto;
@@ -42,7 +62,12 @@
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
 
     @mixin smallAndAbove {
+      font-size: 1.575rem;
+    }
+
+    @mixin largeAndAbove {
       font-size: 1.875rem;
     }
   }
+
 }
