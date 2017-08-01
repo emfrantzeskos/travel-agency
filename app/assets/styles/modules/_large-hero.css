@@ -62,7 +62,7 @@
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
 
     @mixin smallAndAbove {
-      font-size: 1.575rem;
+      font-size: 1.375rem;
     }
 
     @mixin largeAndAbove {
