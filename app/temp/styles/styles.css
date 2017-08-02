@@ -1118,8 +1118,29 @@ a {
   }
   }
 
+.site-header__logo__graphic {
+    text-indent: -9999px;
+    margin-top: -18px;
+  }
+
 .site-header__btn-container {
     float: right;
+  }
+
+.site-header__menu-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+@media (min-width: 800px) {
+
+.site-header__menu-icon {
+      display: none
+  }
   }
 
 .site-header__menu-content {
@@ -1132,6 +1153,10 @@ a {
       display: block
   }
   }
+
+.site-header__menu-content--is-visible {
+      display: block;
+    }
 
 .primary-nav--pull-right {
     float: right;
