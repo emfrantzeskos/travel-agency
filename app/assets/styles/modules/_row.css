@@ -74,12 +74,20 @@
   }
 
   @mixin largeAndAbove {
-    &--change-gutters-to-small-at-large {
-      margin-right: -45px;
+    &--change-gutters-to-medium-at-large {
+      margin-right: -70px;
     }
 
-    &--change-gutters-to-small-at-large > div[class^="row__"] {
-      padding-right: 45px;
+    &--change-gutters-to-medium-at-large > div[class^="row__"] {
+      padding-right: 70px;
+    }
+
+    &--change-gutters-to-large-at-large {
+      margin-right: -100px;
+    }
+
+    &--change-gutters-to-large-at-large > div[class^="row__"] {
+      padding-right: 100px;
     }
   }
 

@@ -1,7 +1,13 @@
 .primary-nav {
+  padding-top: 10px;
+  @mixin mediumAndAbove {
+    padding-top: 0;
+  }
 
   &--pull-right {
-    float: right;
+    @mixin mediumAndAbove {
+      float: right;
+    }
   }
 
   ul {
@@ -11,9 +17,26 @@
   }
 
   li {
-    float: left;
+    display: inline-block;
     list-style-type: none;
-    padding-right: 1.25rem;
+    font-size: 0.95rem;
+    @media (min-width: 400px) {
+      font-size: 1rem;
+      padding-right: 0.7rem;
+    }
+    @mixin mediumAndAbove {
+      float: left;
+      display: list-item;
+      padding-right: 1.25rem;
+      background-color: transparent;
+    }
+  }
+
+  li:last-child {
+    padding-right: 0;
+    @mixin mediumAndAbove {
+      padding-right: 1.25rem;
+    }
   }
 
   a {
@@ -21,8 +44,13 @@
     color: #FFF;
     font-weight: 300;
     display: inline-block;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px 3px;
+    background-color: rgba($mainBlue, .6);
+    margin-bottom: 10px;
+    @mixin mediumAndAbove {
+      background-color: transparent;
+      margin-bottom: 0;
+    }
   }
 
 }
