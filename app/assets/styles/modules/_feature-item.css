@@ -32,10 +32,4 @@
     }
   }
 
-  &--top-margin-until-medium {
-    margin-top: 4.063rem;
-    @mixin mediumAndAbove {
-        margin-top: initial;
-    }
-  }
 }

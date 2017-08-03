@@ -597,7 +597,7 @@ a {
   }
 
 .wrapper {
-  overflow-x: hidden;
+  overflow: hidden;
   padding-left: 15px;
   padding-right: 15px;
   max-width: 1230px;
@@ -959,12 +959,14 @@ a {
 .feature-item {
   position: relative;
   padding-bottom: 1.5rem;
+
 }
 
 @media (min-width: 530px) {
 
 .feature-item {
     padding-left: 94px
+
 }
   }
 
@@ -997,17 +999,6 @@ a {
       margin-top: 1em;
       text-align: left;
       font-size: 1.875rem
-  }
-  }
-
-.feature-item--top-margin-until-medium {
-    margin-top: 4.063rem;
-  }
-
-@media (min-width: 800px) {
-
-.feature-item--top-margin-until-medium {
-        margin-top: initial
   }
   }
 
@@ -1419,4 +1410,16 @@ a {
     width: 34.75px;
     height: 42px;
     background-position: 36.69752421959096% 45.792307692307695%;
+  }
+
+.hide-item {
+  opacity: 0;
+  margin-top: 100px;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.hide-item--is-visible {
+    opacity: 1;
+    margin-top: 0;
   }

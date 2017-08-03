@@ -1,0 +1,10 @@
+.hide-item {
+  opacity: 0;
+  margin-top: 100px;
+  transition: all 1s ease-out;
+
+  &--is-visible {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
