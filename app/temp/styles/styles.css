@@ -959,6 +959,8 @@ a {
 .feature-item {
   position: relative;
   padding-bottom: 1.5rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 
 }
 
@@ -1006,6 +1008,8 @@ a {
   background-color: rgba(255, 255, 255, 0.75);
   padding: 0 0.9375rem 1px 0.9375rem;
   margin-bottom: 120px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 
 }
 
@@ -1092,10 +1096,15 @@ a {
 @media (min-width: 800px) {
 
 .site-header {
+    position: fixed;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: rgba(47,85,114, 0.3)
 }
+
+    .site-header--dark {
+      background-color: rgba(23, 51, 72, 0.82);
+    }
   }
 
 .site-header--is-expanded {
@@ -1106,12 +1115,18 @@ a {
     position: absolute;
     top: 0;
     left: 50%;
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
     -webkit-transform: translateX(-50%) scale(0.85);
             transform: translateX(-50%) scale(0.85);
     -webkit-transform-origin: top;
             transform-origin: top;
     background-color: #2F5572;
     padding: 1.75rem 2.25rem;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
 
 @media (min-width: 800px) {
@@ -1121,6 +1136,11 @@ a {
       -webkit-transform: translateX(0);
               transform: translateX(0)
   }
+
+      .site-header--dark .site-header__logo {
+        -webkit-transform: scale(.5362);
+                transform: scale(.5362);
+      }
   }
 
 .site-header__logo__graphic {
@@ -1331,6 +1351,10 @@ a {
       background-color: transparent;
       margin-bottom: 0
   }
+
+      .primary-nav a.is-current-link {
+        color: #FABB69;
+      }
   }
 
 /* DO NOT EDIT modules/_sprite directly as it is generated automatically by Gulp.
@@ -1414,12 +1438,14 @@ a {
 
 .hide-item {
   opacity: 0;
-  margin-top: 100px;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
 
 .hide-item--is-visible {
     opacity: 1;
-    margin-top: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }

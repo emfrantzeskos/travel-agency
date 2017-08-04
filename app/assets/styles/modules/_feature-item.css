@@ -1,6 +1,7 @@
 .feature-item {
   position: relative;
   padding-bottom: 1.5rem;
+  backface-visibility: hidden;
 
   @mixin smallAndAbove {
     padding-left: 94px;

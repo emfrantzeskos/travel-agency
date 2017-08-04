@@ -50,6 +50,10 @@
     @mixin mediumAndAbove {
       background-color: transparent;
       margin-bottom: 0;
+
+      &.is-current-link {
+        color: #FABB69;
+      }
     }
   }
 
