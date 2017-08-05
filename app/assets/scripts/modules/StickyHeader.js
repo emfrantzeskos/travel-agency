@@ -6,6 +6,7 @@ class StickyHeader {
   constructor() {
     this.siteHeader = $('.site-header');
     this.ourBeginning = $('#our-beginning');
+    this.logoLink = $('.back-to-the-top');
     this.primaryNavbarLinks = $('.primary-nav a');
     this.pageSection = $('.page-section');
     this.createHeaderWaypoint();
@@ -14,6 +15,7 @@ class StickyHeader {
   }
 
   addSmoothScrolling() {
+    this.logoLink.smoothScroll();
     this.primaryNavbarLinks.smoothScroll();
   }
 
@@ -22,7 +24,7 @@ class StickyHeader {
     new Waypoint({
       element: obj.ourBeginning[0],
       handler: function(direction) {
-        if (direction == 'down') {
+        if (direction === 'down') {
           obj.siteHeader.addClass('site-header--dark');
         }
         else {

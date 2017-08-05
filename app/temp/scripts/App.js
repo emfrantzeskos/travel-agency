@@ -11105,6 +11105,10 @@ var _StickyHeader = __webpack_require__(5);
 
 var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
 
+var _Modal = __webpack_require__(7);
+
+var _Modal2 = _interopRequireDefault(_Modal);
+
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -11115,6 +11119,7 @@ new _MobileMenu2.default();
 new _RevealOnScroll2.default((0, _jquery2.default)('.feature-item'), '90%');
 new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial'), '100%');
 new _StickyHeader2.default();
+new _Modal2.default();
 
 /***/ }),
 /* 3 */
@@ -11261,6 +11266,7 @@ var StickyHeader = function () {
 
     this.siteHeader = (0, _jquery2.default)('.site-header');
     this.ourBeginning = (0, _jquery2.default)('#our-beginning');
+    this.logoLink = (0, _jquery2.default)('.back-to-the-top');
     this.primaryNavbarLinks = (0, _jquery2.default)('.primary-nav a');
     this.pageSection = (0, _jquery2.default)('.page-section');
     this.createHeaderWaypoint();
@@ -11271,6 +11277,7 @@ var StickyHeader = function () {
   _createClass(StickyHeader, [{
     key: 'addSmoothScrolling',
     value: function addSmoothScrolling() {
+      this.logoLink.smoothScroll();
       this.primaryNavbarLinks.smoothScroll();
     }
   }, {
@@ -11280,7 +11287,7 @@ var StickyHeader = function () {
       new Waypoint({
         element: obj.ourBeginning[0],
         handler: function handler(direction) {
-          if (direction == 'down') {
+          if (direction === 'down') {
             obj.siteHeader.addClass('site-header--dark');
           } else {
             obj.siteHeader.removeClass('site-header--dark');
@@ -11691,6 +11698,76 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Modal = function () {
+  function Modal() {
+    _classCallCheck(this, Modal);
+
+    this.modal = (0, _jquery2.default)('.modal');
+    this.body = (0, _jquery2.default)('#home');
+    this.openModalButton = (0, _jquery2.default)('.open-modal');
+    this.closeModalButton = (0, _jquery2.default)('.modal__close');
+    this.events();
+  }
+
+  _createClass(Modal, [{
+    key: 'events',
+    value: function events() {
+      // clicking the open modal button
+      this.openModalButton.click(this.openModal.bind(this));
+      // clicking the x close modal button
+      this.closeModalButton.click(this.closeModal.bind(this));
+      // pushes any key
+      (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
+    }
+  }, {
+    key: 'openModal',
+    value: function openModal() {
+      this.modal.addClass('modal--is-visible');
+      this.body.addClass('no-scroll');
+      return false;
+    }
+  }, {
+    key: 'closeModal',
+    value: function closeModal() {
+      this.modal.removeClass('modal--is-visible');
+      this.body.removeClass('no-scroll');
+    }
+  }, {
+    key: 'keyPressHandler',
+    value: function keyPressHandler(event) {
+      if (event.keyCode === 27) {
+        // when the ESC key is pressed, close the modal
+        this.closeModal();
+      }
+    }
+  }]);
+
+  return Modal;
+}();
+
+exports.default = Modal;
 
 /***/ })
 /******/ ]);

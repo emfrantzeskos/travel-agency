@@ -1,0 +1,26 @@
+.social-icons {
+  text-align: center;
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 33%;
+    height: 72px;
+    background-color: $mainOrange;
+    margin: .3125rem;
+
+    @media (min-width: 390px) {
+      margin: 0 .3125rem;
+      width: 72px;
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+}

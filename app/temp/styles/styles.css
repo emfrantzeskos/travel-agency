@@ -470,6 +470,10 @@ a {
   color: #D59541;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .large-hero {
   position: relative;
   border-bottom: 10px solid #2F5572;
@@ -604,6 +608,10 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
+.wrapper--narrow {
+    max-width: 450px;
+  }
 
 .wrapper--medium {
     max-width: 980px;
@@ -946,6 +954,15 @@ a {
       display: inline-block;
       vertical-align: text-top
   }
+
+      .section-title__icon--baseline-align {
+        vertical-align: baseline;
+      }
+  }
+
+.section-title--less-margin {
+    margin-top: 0;
+    margin-bottom: .5em;
   }
 
 .section-title--blue {
@@ -1449,3 +1466,103 @@ a {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.94);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.modal--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+.modal__inner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+
+.modal__description {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    margin-top: 0;
+    margin-bottom: 1.875rem;
+  }
+
+.modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #2F5572;
+    -webkit-transform: scaleX(1.2);
+            transform: scaleX(1.2);
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+    -webkit-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+
+@media (min-width: 530px) {
+
+.modal__close {
+      font-size: 2rem
+  }
+  }
+
+.modal__close:hover {
+      color: #D59541;
+    }
+
+.social-icons {
+  text-align: center;
+
+}
+
+.social-icons__icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 33%;
+    height: 72px;
+    background-color: #D59541;
+    margin: .3125rem;
+  }
+
+@media (min-width: 390px) {
+
+.social-icons__icon {
+      margin: 0 .3125rem;
+      width: 72px
+  }
+    }
+
+.social-icons__icon .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
