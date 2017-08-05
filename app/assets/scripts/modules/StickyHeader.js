@@ -4,6 +4,7 @@ import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoi
 
 class StickyHeader {
   constructor() {
+    this.lazyImages = $('.lazyload');
     this.siteHeader = $('.site-header');
     this.ourBeginning = $('#our-beginning');
     this.logoLink = $('.back-to-the-top');
@@ -12,6 +13,13 @@ class StickyHeader {
     this.createHeaderWaypoint();
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
+    this.refreshWaypoints();
+  }
+
+  refreshWaypoints() {
+    this.lazyImages.on('load', function() {
+      Waypoint.refreshAll();
+    });
   }
 
   addSmoothScrolling() {
@@ -47,7 +55,7 @@ class StickyHeader {
             $(matchingHeaderLink).addClass('is-current-link');
           }
         },
-        offset: '20%'
+        offset: '40%'
       });
       new Waypoint({
         element: currentPageSection,

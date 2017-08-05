@@ -11264,6 +11264,7 @@ var StickyHeader = function () {
   function StickyHeader() {
     _classCallCheck(this, StickyHeader);
 
+    this.lazyImages = (0, _jquery2.default)('.lazyload');
     this.siteHeader = (0, _jquery2.default)('.site-header');
     this.ourBeginning = (0, _jquery2.default)('#our-beginning');
     this.logoLink = (0, _jquery2.default)('.back-to-the-top');
@@ -11272,9 +11273,17 @@ var StickyHeader = function () {
     this.createHeaderWaypoint();
     this.createPageSectionWaypoints();
     this.addSmoothScrolling();
+    this.refreshWaypoints();
   }
 
   _createClass(StickyHeader, [{
+    key: 'refreshWaypoints',
+    value: function refreshWaypoints() {
+      this.lazyImages.on('load', function () {
+        Waypoint.refreshAll();
+      });
+    }
+  }, {
     key: 'addSmoothScrolling',
     value: function addSmoothScrolling() {
       this.logoLink.smoothScroll();
@@ -11310,7 +11319,7 @@ var StickyHeader = function () {
               (0, _jquery2.default)(matchingHeaderLink).addClass('is-current-link');
             }
           },
-          offset: '20%'
+          offset: '40%'
         });
         new Waypoint({
           element: currentPageSection,
