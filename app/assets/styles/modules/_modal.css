@@ -9,7 +9,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(-100%);
-  transition: all 0.4s ease-out;
+  transition: all 0.3s ease-out;
   backface-visibility: hidden;
 
   &--is-visible {
