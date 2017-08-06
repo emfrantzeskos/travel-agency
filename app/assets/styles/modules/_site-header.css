@@ -33,7 +33,7 @@
       transform: translateX(0);
 
       .site-header--dark & {
-        transform: scale(.5362);
+        transform: scale(.5254);
       }
     }
   }
