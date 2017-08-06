@@ -8,7 +8,10 @@
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
-    padding-top: 90px;
+    padding-top: 110px;
+    @media (min-width: 380px) {
+      padding-top: 90px;
+    }
     @mixin mediumAndAbove {
       padding-top: 62px;
     }
@@ -54,7 +57,7 @@
 
   &__description {
     color: #FFF;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 100;
     max-width: 480px;
     margin-left: auto;

@@ -11,9 +11,18 @@
 
   &--lg {
     padding: 1.1rem 1.9rem;
-
     @mixin smallAndAbove {
         font-size: 1.25rem;
     }
   }
+
+  &--lg-smaller {
+    @media (max-width: 480px) {
+      padding: 1rem 1.5rem;
+      @mixin smallAndAbove {
+        padding: 1.1rem 1.9rem;
+      }
+    }
+  }
+
 }

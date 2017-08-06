@@ -26,7 +26,7 @@
     transform: translateX(-50%) scale(0.85);
     transform-origin: top;
     background-color: $mainBlue;
-    padding: 1.75rem 2.25rem;
+    padding: 1.75rem 1.3rem 1.75rem 2.25rem;
     backface-visibility: hidden;
     @mixin mediumAndAbove {
       left: auto;
@@ -41,6 +41,14 @@
   &__logo__graphic {
     text-indent: -9999px;
     margin-top: -18px;
+  }
+
+  &__logo__icon {
+    margin-right: .9rem;
+    margin-left: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: text-top;
   }
 
   &__btn-container {
@@ -122,12 +130,9 @@
     position: relative;
     z-index: -10;
     opacity: 0;
-    padding-top: 100px;
+    padding-top: 110px;
     text-align: center;
     transition: opacity .3s ease-out;
-    @media (min-width: 400px) {
-      padding-top: 110px;
-    }
     @mixin mediumAndAbove {
       display: block;
       padding-top: 0;
